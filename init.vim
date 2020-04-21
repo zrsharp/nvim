@@ -357,6 +357,19 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-html', 'coc-css', 'coc-json'
 let g:tex_flavor = "latex"
 
 
+" ======== vim-markdown ========
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_conceal = 0
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+let g:vim_markdown_conceal_code_blocks = 0
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_autowrite = 1
+
+
 " ======== vim-table-mode ========
 let g:table_mode_corner='|'
 function! s:isAtStartOfLine(mapping)
