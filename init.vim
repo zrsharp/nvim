@@ -40,6 +40,9 @@ Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Code Format
+Plug 'Chiel92/vim-autoformat'
+
 " Undo Tree
 Plug 'mbbill/undotree/'
 
@@ -72,6 +75,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'mzlogin/vim-markdown-toc'
 call plug#end()
 
 set completeopt=menu,menuone
@@ -149,6 +153,9 @@ inoreabbrev <expr> <bar><bar>
 inoreabbrev <expr> __
       \ <SID>isAtStartOfLine('__') ?
       \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+
+" ======== autoformat ========
+noremap <F3> :Autoformat<CR>
 
 source ~/.config/nvim/conf.d/appearance.vim
 source ~/.config/nvim/conf.d/coc.vim
