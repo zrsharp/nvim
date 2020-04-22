@@ -20,13 +20,11 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
+" Appearance
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-" Theme
 Plug 'connorholyday/vim-snazzy'
-Plug 'dracula/vim'
-Plug 'sickill/vim-monokai'
-Plug 'tomasr/molokai'
 
 " File navigation
 Plug 'preservim/nerdtree'
