@@ -10,7 +10,7 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-source ~/.config/nvim/base.vim
+source ~/.config/nvim/conf.d/base.vim
 
 " ======== load plugin ========
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
