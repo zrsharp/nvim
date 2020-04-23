@@ -6,25 +6,27 @@ filetype indent on
 filetype plugin on
 
 if has("autocmd")
-    filetype plugin indent on
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  filetype plugin indent on
+  autocmd BufReadPost ~/.config/nvim/init.vim
+        \ if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 source ~/.config/nvim/conf.d/base.vim
 
 " ======== load plugin ========
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	  autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim 
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
 endif
 
 call plug#begin('~/.config/nvim/plugged')
 " Appearance
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'connorholyday/vim-snazzy'
+Plug 'ryanoasis/vim-devicons'
+Plug 'rafalbromirski/vim-airlineish'
 
 " File navigation
 Plug 'preservim/nerdtree'
@@ -64,7 +66,7 @@ Plug 'vim-scripts/indentpython.vim'
 
 " git
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter' 
+Plug 'airblade/vim-gitgutter'
 Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 
 "UML

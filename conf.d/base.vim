@@ -18,11 +18,11 @@ autocmd Filetype vim,sh,markdown,html,xml,yaml
 
 set shiftround
 
-" set foldmethod=indent
+"set foldmethod=indent
 set laststatus=2
 set foldlevel=99
 set scrolloff=4
-" set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 set number
 "set list
