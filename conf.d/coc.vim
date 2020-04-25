@@ -1,5 +1,5 @@
 let g:coc_global_extensions = ['coc-tsserver', 'coc-html', 'coc-css', 'coc-json',
-      \ 'coc-java', 'coc-flutter', 'coc-go', 'coc-phpls', 'coc-python',
+      \ 'coc-java', 'coc-flutter', 'coc-go', 'coc-phpls',
       \ 'coc-emmet', 'coc-snippets', 'coc-xml', 'coc-yaml',
       \ 'coc-markdownlint', 'coc-highlight']
 

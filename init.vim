@@ -36,7 +36,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 
 " Error checking
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " Auto Complete
 Plug 'jiangmiao/auto-pairs'

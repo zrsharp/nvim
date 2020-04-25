@@ -13,7 +13,7 @@ set softtabstop=4
 
 autocmd Filetype c,cpp,java,python,go,javascript,css,json
       \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cindent
-autocmd Filetype vim,sh,markdown,html,xml,yaml
+autocmd Filetype vim,sh,html,xml,yaml,markdown
       \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 set shiftround
