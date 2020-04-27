@@ -1,5 +1,8 @@
+set nocompatible
+let mapleader=' '
 set mouse=a
 set encoding=utf-8
+set autochdir
 let &t_ut=''
 
 " ======== indent settings ========
@@ -38,6 +41,7 @@ set hlsearch
 exec "nohlsearch"
 set incsearch
 set ignorecase
+set smartcase
 
 " ========== key board map =========
 map sr :set splitright<CR>:vsplit<CR>

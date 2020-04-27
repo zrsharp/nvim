@@ -1,12 +1,10 @@
-set nocompatible
-let mapleader=','
 syntax on
 filetype on
 filetype indent on
 filetype plugin on
+filetype plugin indent on
 
 if has("autocmd")
-  filetype plugin indent on
   autocmd BufReadPost ~/.config/nvim/init.vim
         \ if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
@@ -41,6 +39,8 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 " Auto Complete
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Depend on https://github.com/OmniSharp/omnisharp-roslyn
+Plug 'OmniSharp/omnisharp-vim'
 
 " Code Format
 Plug 'Chiel92/vim-autoformat'
@@ -78,7 +78,14 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'mzlogin/vim-markdown-toc'
+
+Plug 'skywind3000/asyncrun.vim'
+Plug 'lambdalisue/suda.vim'
 call plug#end()
+
+source ~/.config/nvim/conf.d/appearance.vim
+source ~/.config/nvim/conf.d/coc.vim
+source ~/.config/nvim/conf.d/myfunc.vim
 
 set completeopt=menu,menuone
 
@@ -158,8 +165,12 @@ inoreabbrev <expr> __
 
 " ======== autoformat ========
 noremap <F3> :Autoformat<CR>
+autocmd filetype cs noremap <F3> :OmniSharpCodeFormat<CR>
 
-source ~/.config/nvim/conf.d/appearance.vim
-source ~/.config/nvim/conf.d/coc.vim
-source ~/.config/nvim/conf.d/myfunc.vim
+" ======== omnisharp ========
+let g:OmniSharp_server_stdio = 1
+let g:OmniSharp_server_use_mono = 1
+
+" ======== suda ========
+let g:suda#prefix = ['suda://', 'sudo://', '_://']
 
