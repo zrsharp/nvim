@@ -67,3 +67,7 @@ map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
 
 noremap <LEADER><CR> :nohlsearch<CR>
 
+noremap <LEADER><LEADER> <ESC>/<++><CR>:nohlsearch<CR>c4l
+
+noremap <LEADER>b i****<ESC>hi
+

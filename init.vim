@@ -44,7 +44,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 
 " Error checking
-" Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 " Auto Complete
 Plug 'jiangmiao/auto-pairs'
@@ -84,7 +84,7 @@ Plug 'aklt/plantuml-syntax'
 
 " Markdown
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+"Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'mzlogin/vim-markdown-toc'
@@ -98,6 +98,9 @@ source ~/.config/nvim/conf.d/coc.vim
 source ~/.config/nvim/conf.d/myfunc.vim
 
 set completeopt=menu,menuone
+
+" ======== indentLine ========
+let g:indentLine_setConceal = 0
 
 "" NERDTree-git
 let g:NERDTreeIndicatorMapCustom = {
@@ -121,19 +124,8 @@ augroup javascript_folding
   au!
   au FileType javascript setlocal foldmethod=syntax
 augroup END
-"let g:javascript_conceal_function             = "ƒ"
-"let g:javascript_conceal_null                 = "ø"
-"let g:javascript_conceal_this                 = "@"
-"let g:javascript_conceal_return               = "⇚"
-"let g:javascript_conceal_undefined            = "¿"
-"let g:javascript_conceal_NaN                  = "ℕ"
-"let g:javascript_conceal_prototype            = "¶"
-"let g:javascript_conceal_static               = "•"
-"let g:javascript_conceal_super                = "Ω"
-"let g:javascript_conceal_arrow_function       = "⇒"
-"let g:javascript_conceal_noarg_arrow_function = "🞅"
-"let g:javascript_conceal_underscore_arrow_function = "🞅"
 set conceallevel=1
+set concealcursor="v"
 augroup VimCSS3Syntax
   autocmd!
   autocmd FileType css setlocal iskeyword+=-
@@ -146,16 +138,16 @@ autocmd FileType html,css EmmetInstall
 map T :TagbarOpenAutoClose<CR>
 
 " ======== vim-markdown ========
-let g:vim_markdown_toc_autofit = 1
-let g:vim_markdown_conceal = 0
-let g:tex_conceal = ""
-let g:vim_markdown_math = 1
-let g:vim_markdown_conceal_code_blocks = 0
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_json_frontmatter = 1
-let g:vim_markdown_toml_frontmatter = 1
-let g:vim_markdown_new_list_item_indent = 2
-let g:vim_markdown_autowrite = 1
+"let g:vim_markdown_toc_autofit = 1
+"let g:vim_markdown_conceal = 0
+"let g:tex_conceal = ""
+"let g:vim_markdown_math = 1
+"let g:vim_markdown_conceal_code_blocks = 0
+"let g:vim_markdown_frontmatter = 1
+"let g:vim_markdown_json_frontmatter = 1
+"let g:vim_markdown_toml_frontmatter = 1
+"let g:vim_markdown_new_list_item_indent = 2
+"let g:vim_markdown_autowrite = 1
 
 " ======== vim-table-mode ========
 let g:table_mode_corner='|'
