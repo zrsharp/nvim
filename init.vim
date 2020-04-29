@@ -51,6 +51,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Depend on https://github.com/OmniSharp/omnisharp-roslyn
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'preservim/nerdcommenter'
 
 " Code Format
 Plug 'Chiel92/vim-autoformat'
