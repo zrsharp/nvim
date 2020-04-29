@@ -84,7 +84,6 @@ Plug 'aklt/plantuml-syntax'
 
 " Markdown
 Plug 'godlygeek/tabular'
-"Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'mzlogin/vim-markdown-toc'
@@ -124,7 +123,7 @@ augroup javascript_folding
   au!
   au FileType javascript setlocal foldmethod=syntax
 augroup END
-set conceallevel=1
+set conceallevel=0
 set concealcursor="v"
 augroup VimCSS3Syntax
   autocmd!
@@ -136,18 +135,6 @@ autocmd FileType html,css EmmetInstall
 
 " Taglist
 map T :TagbarOpenAutoClose<CR>
-
-" ======== vim-markdown ========
-"let g:vim_markdown_toc_autofit = 1
-"let g:vim_markdown_conceal = 0
-"let g:tex_conceal = ""
-"let g:vim_markdown_math = 1
-"let g:vim_markdown_conceal_code_blocks = 0
-"let g:vim_markdown_frontmatter = 1
-"let g:vim_markdown_json_frontmatter = 1
-"let g:vim_markdown_toml_frontmatter = 1
-"let g:vim_markdown_new_list_item_indent = 2
-"let g:vim_markdown_autowrite = 1
 
 " ======== vim-table-mode ========
 let g:table_mode_corner='|'

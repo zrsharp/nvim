@@ -19,11 +19,13 @@ func! CompileAndRun()
     exec '!time bash %'
   elseif &filetype == 'markdown'
     exec 'MarkdownPreview'
+  elseif &filetype == 'html'
+    exec 'AsyncRun chromium %'
   endif
 endfunc
 
 
-" ======== auto input method ========
+" ======== auto change input method ========
 let g:input_toggle = 1
 function! Fcitx2en()
   let s:input_status = system("fcitx-remote")

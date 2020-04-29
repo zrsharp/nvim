@@ -41,9 +41,6 @@
             ],
             "filetypes": [
                 "sh"
-            ],
-            "ignoredRootPaths": [
-                "~"
             ]
         },
         "python": {
