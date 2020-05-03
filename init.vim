@@ -44,7 +44,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 
 " Error checking
-"Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " Auto Complete
 Plug 'jiangmiao/auto-pairs'
@@ -81,7 +81,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 
 "UML
-Plug 'aklt/plantuml-syntax'
+Plug 'aklt/plantuml-syntax', { 'for': ['plantuml'] }
 
 " Markdown
 Plug 'godlygeek/tabular'
@@ -91,13 +91,18 @@ Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'skywind3000/asyncrun.vim'
 Plug 'lambdalisue/suda.vim'
+
 call plug#end()
 
 source ~/.config/nvim/conf.d/appearance.vim
 source ~/.config/nvim/conf.d/coc.vim
 source ~/.config/nvim/conf.d/myfunc.vim
 
-set completeopt=menu,menuone
+set completeopt=menu
+
+let g:ale_linters = {
+      \   'asm': [],
+      \}
 
 " ======== indentLine ========
 let g:indentLine_setConceal = 0
@@ -164,3 +169,5 @@ let g:OmniSharp_server_use_mono = 1
 " ======== suda ========
 let g:suda#prefix = ['suda://', 'sudo://', '_://']
 
+" ====== nasm ========
+let g:asmsyntax = 'nasm'

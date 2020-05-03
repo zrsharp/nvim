@@ -1,7 +1,7 @@
 set nocompatible
 let mapleader=' '
 set mouse=a
-set encoding=utf-8
+"set encoding=utf-8
 set autochdir
 let &t_ut=''
 

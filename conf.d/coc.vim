@@ -128,9 +128,9 @@ command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport
 " Show all diagnostics.
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
+"nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <space>c :<C-u>CocList commands<cr>
+"nnoremap <silent> <space>c :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent> <space>o :<C-u>CocList outline<cr>
 " Search workspace symbols.

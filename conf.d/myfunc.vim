@@ -21,6 +21,8 @@ func! CompileAndRun()
     exec 'MarkdownPreview'
   elseif &filetype == 'html'
     exec 'AsyncRun chromium %'
+  elseif &filetype == 'plantuml'
+    exec '!time plantuml %'
   endif
 endfunc
 
@@ -45,6 +47,6 @@ endfunction
 
 set timeoutlen=150
 autocmd InsertLeave * call Fcitx2en()
-autocmd InsertEnter * call Fcitx2zh()
+"autocmd InsertEnter * call Fcitx2zh()
 
 
