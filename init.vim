@@ -100,10 +100,6 @@ source ~/.config/nvim/conf.d/myfunc.vim
 
 set completeopt=menu
 
-let g:ale_linters = {
-      \   'asm': [],
-      \}
-
 " ======== indentLine ========
 let g:indentLine_setConceal = 0
 
