@@ -101,7 +101,8 @@ source ~/.config/nvim/conf.d/myfunc.vim
 set completeopt=menu
 
 " ======== indentLine ========
-let g:indentLine_setConceal = 0
+autocmd FileType markdown let g:indentLine_enabled = 0
+let g:indentLine_setConceal = 1
 
 "" NERDTree-git
 let g:NERDTreeIndicatorMapCustom = {
@@ -155,6 +156,8 @@ inoreabbrev <expr> __
       \ '<c-o>:silent! TableModeDisable<cr>' : '__'
 
 " ======== autoformat ========
+let g:formatdef_masm = '"asmfmt"'
+let g:formatters_masm = ['masm']
 noremap <F3> :Autoformat<CR>
 autocmd filetype cs noremap <F3> :OmniSharpCodeFormat<CR>
 
@@ -165,5 +168,5 @@ let g:OmniSharp_server_use_mono = 1
 " ======== suda ========
 let g:suda#prefix = ['suda://', 'sudo://', '_://']
 
-" ====== nasm ========
-let g:asmsyntax = 'nasm'
+" ====== asm ========
+let g:asmsyntax = 'masm'
