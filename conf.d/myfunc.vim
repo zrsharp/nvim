@@ -34,6 +34,8 @@ function! Fcitx2en()
   if s:input_status == 2
     let g:input_toggle = 1
     let l:a = system("fcitx-remote -c")
+  else
+    echo s:input_status
   endif
 endfunction
 

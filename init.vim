@@ -15,7 +15,7 @@ filetype plugin on
 filetype plugin indent on
 
 if has("autocmd")
-  autocmd BufReadPost ~/.config/nvim/init.vim
+  autocmd BufReadPost *
         \ if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
