@@ -48,7 +48,7 @@ Plug 'dense-analysis/ale'
 
 " Auto Complete
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Depend on https://github.com/OmniSharp/omnisharp-roslyn
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'preservim/nerdcommenter'
@@ -119,9 +119,9 @@ let g:NERDTreeIndicatorMapCustom = {
       \ }
 
 " html css js
-"let g:javascript_plugin_jsdoc = 1
-"let g:javascript_plugin_ngdoc = 1
-"let g:javascript_plugin_flow = 1
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
 augroup javascript_folding
   au!
   au FileType javascript setlocal foldmethod=syntax
