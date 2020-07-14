@@ -4,3 +4,6 @@ colorscheme snazzy
 
 "let g:airline_theme='kolor'
 let g:airline_theme = 'airlineish'
+
+set notermguicolors
+
